@@ -20,16 +20,13 @@ createApp({
 
         addToDo() {
       
-            let newToDoObject = {
-                text: this.newToDo,
-                done: false,
+            let data = {
+                newToDo: this.newToDo,
             };
-
-            this.todos.push(newToDoObject);
       
-            // axios.post('./server.php', newToDoObject, {headers: {'Content-Type': 'multipart/form-data'}}).then(res => {
-            //     this.getToDos();
-            // });
+            axios.post('./server.php', data, {headers: {'Content-Type': 'multipart/form-data'}}).then(res => {
+                this.getToDos();
+            });
 
             this.newToDo = '';
         },
@@ -39,7 +36,7 @@ createApp({
         }
 
     },
-    
+
     mounted() {
         this.getToDos();
     }
