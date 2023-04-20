@@ -1,23 +1,23 @@
 [
     {
         "text": "Allenarsi",
-        "done": true
+        "done": false
     },
     {
         "text": "Fare la spesa",
-        "done": true
+        "done": false
     },
     {
         "text": "Giardinaggio",
-        "done": true
+        "done": false
     },
     {
         "text": "Leggere",
-        "done": true
+        "done": false
     },
     {
         "text": "Dipingere",
-        "done": true
+        "done": false
     },
     {
         "text": "Comprare scarpe",
