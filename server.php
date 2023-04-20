@@ -1,31 +1,6 @@
 <?php
 
-$todos = [
-    [
-        "text" => "Allenarsi",
-        "done"=> true
-    ],
-    [
-        "text"=> "Fare la spesa",
-        "done"=> true
-    ],
-    [
-        "text"=> "Giardinaggio",
-        "done"=> true
-    ],
-    [
-        "text"=> "Leggere",
-        "done"=> true
-    ],
-    [
-        "text"=> "Dipingere",
-        "done"=> true
-    ],
-    [
-        "text"=> "Comprare scarpe",
-        "done"=> false
-    ]
-];
+$todos = json_decode(file_get_contents('./todos.json'));
 
 header('Content-type: application/json');
 
