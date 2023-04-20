@@ -13,6 +13,12 @@ if(isset($_POST['newToDo'])) {
     $newToDo = json_encode($todos);
     file_put_contents('./todos.json', $newToDo);
 
+} else if (isset($_POST['deletedItem'])) {
+
+    array_splice($todos,$_POST['deletedItem'], 1);
+    $newToDo = json_encode($todos);
+    file_put_contents('./todos.json', $newToDo);
+
 } else {
 
     header('Content-type: application/json');

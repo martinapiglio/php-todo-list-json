@@ -33,6 +33,17 @@ createApp({
 
         changeStatus(element) {
             element.done = !element.done;
+        },
+
+        deleteToDo(index) {
+
+            let data = {
+                deletedItem: index,
+            };
+
+            axios.post('./server.php', data, { headers: { 'Content-Type': 'multipart/form-data' } }).then(res => {
+                this.getToDos();
+            });
         }
 
     },
